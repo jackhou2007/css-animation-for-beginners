@@ -3,47 +3,50 @@ body {
 }
 
 .container {
+  width: 100px;
   margin: 100px auto;
   padding: 100px;
   position: relative;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  width: 100px;
 }
 
 .heart {
-  background: salmon;
-  height: 100px;
   position: relative;
   width: 100px;
+  height: 100px;
+  background: salmon;
 
-  animation-name: heartBeat;
   -webkit-animation-name: heartBeat;
-  animation-duration: 1.5s;
+  animation-name: heartBeat;
   -webkit-animation-duration: 1.5s;
-  animation-iteration-count: 2;
+  animation-duration: 1.5s;
   -webkit-animation-iteration-count: 2;
-  animation-delay: 3;
+  animation-iteration-count: 2;
   -webkit-animation-delay: 3;
+  animation-delay: 3;
 }
 
 .heart:before {
-  background: salmon;
-  border-radius: 50%;
-  content: "";
-  height: 100px;
   position: absolute;
   top: -50px;
   width: 100px;
+  height: 100px;
+  content: "";
+  background: salmon;
+  border-radius: 50%;
 }
 
 .heart:after {
+  position: absolute;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  content: "";
   background: salmon;
   border-radius: 50%;
-  content: "";
-  height: 100px;
-  left: -50px;
-  position: absolute;
-  width: 100px;
 }
 
 @keyframes heartBeat {
